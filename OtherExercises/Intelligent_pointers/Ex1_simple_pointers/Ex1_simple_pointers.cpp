@@ -80,10 +80,12 @@ int main()
 	int a = 8;
 
 	// TODO : Passe the variable 'a' to the function 'f'.
-	f(std::shared_ptr<int>(&a, [](int*) {})); // Using a "custom deleter" that does nothing.
-	// Note : Wrapping an existing variable ('a') without allocating memory (the code found
-	// three lines above) is not recommended. It has been used only to complete the
-	// exercise, which indirectly compares the uses of raw and intelligent pointers.
+	f(std::shared_ptr<int>(&a, [](int*) {})); 
+	// The previous line of code uses a "custom deleter" that does nothing.
+	// Note : Wrapping an existing variable ('a') without allocating memory 
+	// (the previous line of code above) is not recommended. It has been used 
+	// only to complete the exercise, which indirectly compares the uses of 
+	// raw and intelligent pointers.
 
 	// TODO : Print the content of 'a' (displays 6).
 	std::cout << "a = " << a << std::endl;
@@ -108,7 +110,7 @@ int main()
 	// TODO : Try to pass the variable 'a' to the function 'g'.
 	// Why is there a problem ?
 	
-	// g(std::shared_ptr<int> ptr(&a, [](int*) {}));
+	// g(std::shared_ptr<int>(&a, [](int*) {}));
 	// The function 'g()' takes a parameter by reference, non const. When the a
 	// parameter is a non const reference, the argument passed must be of the
 	// exact type. Also the argument can not be the result of an experssion 

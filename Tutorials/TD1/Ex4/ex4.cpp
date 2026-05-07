@@ -1,5 +1,18 @@
+// The amin of this code file is to implement the russian multiplication.
+// Details about the implementation are given in the pdf file describing
+// how russian multiplication works (the pdf file should be found in the
+// parent directory). Also, comments have been addedto the code, to explain, 
+// when required.
+
 #include <iostream>
 
+
+/// <summary>
+/// This function sets the sign of the result of the russian multiplication.
+/// </summary>
+/// <param name="a">Operand for multiplication.</param>
+/// <param name="b">Operand for multiplication.</param>
+/// <returns>-1 or +1, based on the signs of each operand.</returns>
 int setRussianMultiplicationSign(int a, int b)
 {
 	// Set variable to hold sign of the result obtained from russian
@@ -16,6 +29,14 @@ int setRussianMultiplicationSign(int a, int b)
 	return resultSign;
 }
 
+
+/// <summary>
+/// This function computes the russian multiplication between 
+/// two integer operands.
+/// </summary>
+/// <param name="a">Operand for multiplication.</param>
+/// <param name="b">Operand for multiplication.</param>
+/// <returns>The product obtained after multiplication.</returns>
 int russianMultiply(int a, int b)
 {
 	// Set the sign of the final result.
